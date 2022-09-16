@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
   res.send("Home page");
 });
 
-router.use("books", bookRouter);
+router.use("/books", bookRouter);
 
 router.all("/*", (req, res) => {
   res.send("Page not found");
