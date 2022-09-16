@@ -3,24 +3,24 @@ const express = require("express");
 const bookRouter = express.Router();
 
 bookRouter
-  .get("/books", (req, res) => {
+  .get("/", (req, res) => {
     res.send("Get all books");
   })
-  .post("/books", (req, res) => {
+  .post("/", (req, res) => {
     res.send("Create a new book");
   });
 
 bookRouter
-  .get("/books/:id", (req, res) => {
+  .get("/:id", (req, res) => {
     res.send("Get a single book");
   })
-  .put("/books/:id", (req, res) => {
+  .put("/:id", (req, res) => {
     res.send("Full update a book");
   })
-  .patch("/books/:id", (req, res) => {
+  .patch("/:id", (req, res) => {
     res.send("Partial update a book");
   })
-  .delete("/books/:id", (req, res) => {
+  .delete("/:id", (req, res) => {
     res.send("Delete a book");
   });
 
