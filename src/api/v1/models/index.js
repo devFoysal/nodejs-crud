@@ -22,8 +22,8 @@ const db = {}
 db.Sequelize = Sequelize
 db.sequelize = sequelize
 
-db.products = require('./Product')(sequelize, DataTypes)
-db.reviews = require('./Review')(sequelize, DataTypes)
+db.products = require('./ProductModel')(sequelize, DataTypes)
+db.reviews = require('./ReviewModel')(sequelize, DataTypes)
 
 db.sequelize
     .sync({ force: false })
